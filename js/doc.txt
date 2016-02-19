@@ -1,0 +1,3 @@
+ngBind - Propaga o valor de uma variavel em toda a aplicação.
+ng-model - Atualiza uma variavel.
+
