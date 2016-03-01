@@ -1,0 +1,49 @@
+<html ng-app="app">
+    <head>
+        <title>Curso AngularJS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">           
+    </head>
+    <body>
+        
+        <div ng-controller="Aula26Controller">
+        
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-xs-12">
+        				
+        				<h1>Acordion</h1>
+
+        				<input type="text" ng-model="accor.heading">
+        				<input type="text" ng-model="accor.content">
+        				<button type="button" ng-click="addAccordion()"> Add</button>
+        				<hr/>
+
+        				<uib-accordion>
+        					<uib-accordion-group heading="Titulo do accordion">	
+        						<p>Conteúdo do accordion</p>
+        						<button class="btn btn-danger" ng-click="addAlert()">Delete</button>
+        					</uib-accordion-group>	
+
+        					<uib-accordion-group heading="Titulo elemento 2">	
+        						<p>Conteúdo do accordion</p>
+        					</uib-accordion-group>
+
+        					<uib-accordion-group ng-repeat="g in grupos" heading="{{g.heading}}">	
+        						<div class="alert alert-success">
+        						{{g.content}}
+        						</div>
+        					</uib-accordion-group>
+
+        				</uib-accordion>		
+        			</div>
+        		</div>
+        	</div>
+            
+        </div>
+    
+        <script src="js/angular/angular.min.js"></script>
+        <script src="js/angular/ui-bootstrap-tpls-1.1.2.min.js"></script>
+        <script src="js/aula26Controller.js"></script>
+    </body>
+</html>
